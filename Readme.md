@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Николай Петров](https://up.htmlacademy.ru/adaptive/25/user/122095).
-* Наставник: `Неизвестно`.
+* Наставник: [Константин Соколов](https://htmlacademy.ru/profile/k_sokolov).
 
 ---
 
