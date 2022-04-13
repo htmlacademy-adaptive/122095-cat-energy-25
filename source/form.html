@@ -43,7 +43,7 @@
         </p>
         <form class="filling-form" action="https://echo.htmlacademy.ru/" method="get">
           <div class="filling-form-container">
-            <div class="filling-form__cat-data">
+            <fieldset class="filling-form__cat-data">
               <label class="field-input-label">
                 <span class="field-input-name">ИМЯ:*</span>
                 <input class="field-input" type="text" name="cat-name" placeholder="барсик" required>
@@ -56,24 +56,24 @@
                 <span class="field-input-name">Возраст (лет):</span>
                 <input class="field-input" type="number" name="cat-age" placeholder="7">
               </label>
-            </div>
-            <div class="filling-__program">
+            </fieldset>
+            <fieldset class="filling-form__program">
               <label class="radio-input-label">
-                <input class="radio-input" type="radio" name="program" value="weight-loss" checked>
+                <input class="radio-input" type="radio" name="goal" value="weight-loss" checked>
                 <span class="radio-control-mark"></span>
                 <span class="radio-input-name">похудение</span>
               </label>
               <label class="radio-input-label">
-                <input class="radio-input" type="radio" name="program" value="weight-gain">
+                <input class="radio-input" type="radio" name="goal" value="weight-gain">
                 <span class="radio-control-mark"></span>
                 <span class="radio-input-name">Набор массы</span>
               </label>
               <label class="radio-input-label">
-                <input class="radio-input" type="radio" name="program" value="I-don't-know">
+                <input class="radio-input" type="radio" name="goal" value="I-don't-know">
                 <span class="radio-control-mark"></span>
                 <span class="radio-input-name">Не знаю (Нужен ваш совет)</span>
               </label>
-            </div>
+            </fieldset>
           </div>
           <fieldset class="owner-contacts">
             <legend class="owner-contacts__legend">
@@ -118,7 +118,7 @@
               <span class="checkbox-input-name">витамины</span>
             </label>
           </fieldset>
-          <button class="button">
+          <button class="button" type="submit">
             отправить заявку
           </button>
           <p class="form__footnote footnote">
