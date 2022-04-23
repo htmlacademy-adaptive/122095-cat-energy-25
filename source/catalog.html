@@ -2,8 +2,9 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -11,23 +12,23 @@
         <img src="img/header-logo-mobile.svg" width="33" height="37" alt="Логотип интернет-магазина «Кэт энерджи».">
         <img src="img/header-logo-2.svg" width="101" height="18" alt="Интернет-магазин «Кэт энерджи».">
       </a>
-      <button class="main-nav__button" type="button">
+      <button class="main-header__button" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a href="index.html">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link" href="index.html">
               Главная
             </a>
           </li>
-          <li class="site-list__item">
-            <a>
+          <li class="main-nav__item">
+            <a class="main-nav__link">
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">
               Подбор программы
             </a>
           </li>
@@ -49,24 +50,24 @@
                 <img src="img/catalog-main-products/pro-500-chicken-ver1.jpg" width="68" height="86" alt="Корм с курицей 500 грамм.">
               </a>
               <div class="product__description">
-                <a class="product-link" href="#">
+                <a class="product__link" href="#">
                   <h3 class="product__name">
                     Cat Energy PRO 500 г
                   </h3>
                 </a>
                 <dl class="product__options">
-                  <dt>Масса</dt>
-                  <dd>500 г</dd>
-                  <dt>Вкус</dt>
-                  <dd>Курица</dd>
-                  <dt>Цена</dt>
-                  <dd>700 Р.</dd>
+                  <dt class="product__definition">Масса</dt>
+                  <dd class="product__total">500 г</dd>
+                  <dt class="product__definition">Вкус</dt>
+                  <dd class="product__total">Курица</dd>
+                  <dt class="product__definition">Цена</dt>
+                  <dd class="product__total">700 Р.</dd>
                 </dl>
               </div>
             </div>
-            <button class="button" type="button">
+            <a class="product__button button" href="#">
               Заказать
-            </button>
+            </a>
           </div>
           <div class="product">
             <div class="product__wrapper">
@@ -74,24 +75,24 @@
                 <img src="img/catalog-main-products/pro-1000-chicken-ver1.jpg" width="84" height="101" alt="Корм с курицей 1000 грамм.">
               </a>
               <div class="product__description">
-                <a class="product-link" href="#">
+                <a class="product__link" href="#">
                   <h3 class="product__name">
                     Cat Energy PRO 1000 г
                   </h3>
                 </a>
                 <dl class="product__options">
-                  <dt>Масса</dt>
-                  <dd>1000 г</dd>
-                  <dt>Вкус</dt>
-                  <dd>Курица</dd>
-                  <dt>Цена</dt>
-                  <dd>1000 Р.</dd>
+                  <dt class="product__definition">Масса</dt>
+                  <dd class="product__total">1000 г</dd>
+                  <dt class="product__definition">Вкус</dt>
+                  <dd class="product__total">Курица</dd>
+                  <dt class="product__definition">Цена</dt>
+                  <dd class="product__total">1000 Р.</dd>
                 </dl>
               </div>
             </div>
-            <button class="button" type="button">
+            <a class="product__button button" href="#">
               Заказать
-            </button>
+            </a>
           </div>
           <div class="product">
             <div class="product__wrapper">
@@ -99,24 +100,24 @@
                 <img src="img/catalog-main-products/pro-500-fish-ver1.jpg" width="68" height="78" alt="Корм с рыбой 500 грамм.">
               </a>
               <div class="product__description">
-                <a class="product-link" href="#">
+                <a class="product__link" href="#">
                   <h3 class="product__name">
                     Cat Energy PRO 500 г
                   </h3>
                 </a>
                 <dl class="product__options">
-                  <dt>Масса</dt>
-                  <dd>500 г</dd>
-                  <dt>Вкус</dt>
-                  <dd>Рыба</dd>
-                  <dt>Цена</dt>
-                  <dd>700 Р.</dd>
+                  <dt class="product__definition">Масса</dt>
+                  <dd class="product__total">500 г</dd>
+                  <dt class="product__definition">Вкус</dt>
+                  <dd class="product__total">Рыба</dd>
+                  <dt class="product__definition">Цена</dt>
+                  <dd class="product__total">700 Р.</dd>
                 </dl>
               </div>
             </div>
-            <button class="button" type="button">
+            <a class="product__button button" href="#">
               Заказать
-            </button>
+            </a>
           </div>
           <div class="product">
             <div class="product__wrapper">
@@ -124,24 +125,24 @@
                 <img src="img/catalog-main-products/pro-1000-fish-ver1.jpg" width="84" height="101" alt="Корм с рыбой 1000 грамм.">
               </a>
               <div class="product__description">
-                <a class="product-link" href="#">
+                <a class="product__link" href="#">
                   <h3 class="product__name">
                     Cat Energy PRO 1000 г
                   </h3>
                 </a>
                 <dl class="product__options">
-                  <dt>Масса</dt>
-                  <dd>1000 г</dd>
-                  <dt>Вкус</dt>
-                  <dd>Рыба</dd>
-                  <dt>Цена</dt>
-                  <dd>1000 Р.</dd>
+                  <dt class="product__definition">Масса</dt>
+                  <dd class="product__total">1000 г</dd>
+                  <dt class="product__definition">Вкус</dt>
+                  <dd class="product__total">Рыба</dd>
+                  <dt class="product__definition">Цена</dt>
+                  <dd class="product__total">1000 Р.</dd>
                 </dl>
               </div>
             </div>
-            <button class="button" type="button">
+            <a class="product__button button" href="#">
               Заказать
-            </button>
+            </a>
           </div>
           <div class="product">
             <div class="product__wrapper">
@@ -149,24 +150,24 @@
                 <img src="img/catalog-main-products/slim-500-buckwheat-ver1.jpg" width="68" height="78" alt="Корм с гречкой 500 грамм.">
               </a>
               <div class="product__description">
-                <a class="product-link" href="#">
+                <a class="product__link" href="#">
                   <h3 class="product__name">
                     Cat Energy slim 500 г
                   </h3>
                 </a>
                 <dl class="product__options">
-                  <dt>Масса</dt>
-                  <dd>500 г</dd>
-                  <dt>Вкус</dt>
-                  <dd>Гречка</dd>
-                  <dt>Цена</dt>
-                  <dd>400 Р.</dd>
+                  <dt class="product__definition">Масса</dt>
+                  <dd class="product__total">500 г</dd>
+                  <dt class="product__definition">Вкус</dt>
+                  <dd class="product__total">Гречка</dd>
+                  <dt class="product__definition">Цена</dt>
+                  <dd class="product__total">400 Р.</dd>
                 </dl>
               </div>
             </div>
-            <button class="button" type="button">
+            <a class="product__button button" href="#">
               Заказать
-            </button>
+            </a>
           </div>
           <div class="product">
             <div class="product__wrapper">
@@ -174,24 +175,24 @@
                 <img src="img/catalog-main-products/slim-1000-buckwheat-ver1.jpg" width="84" height="100" alt="Корм с гречкой 1000 грамм.">
               </a>
               <div class="product__description">
-                <a class="product-link" href="#">
+                <a class="product__link" href="#">
                   <h3 class="product__name">
                     Cat Energy slim 1000 г
                   </h3>
                 </a>
                 <dl class="product__options">
-                  <dt>Масса</dt>
-                  <dd>1000 г</dd>
-                  <dt>Вкус</dt>
-                  <dd>Гречка</dd>
-                  <dt>Цена</dt>
-                  <dd>700 Р.</dd>
+                  <dt class="product__definition">Масса</dt>
+                  <dd class="product__total">1000 г</dd>
+                  <dt class="product__definition">Вкус</dt>
+                  <dd class="product__total">Гречка</dd>
+                  <dt class="product__definition">Цена</dt>
+                  <dd class="product__total">700 Р.</dd>
                 </dl>
               </div>
             </div>
-            <button class="button" type="button">
+            <a class="product__button button" href="#">
               Заказать
-            </button>
+            </a>
           </div>
           <div class="product">
             <div class="product__wrapper">
@@ -199,24 +200,24 @@
                 <img src="img/catalog-main-products/slim-500-rice-ver1.jpg" width="72" height="84" alt="Корм с рисом 500 грамм.">
               </a>
               <div class="product__description">
-                <a class="product-link" href="#">
+                <a class="product__link" href="#">
                   <h3 class="product__name">
                     Cat Energy slim 500 г
                   </h3>
                 </a>
                 <dl class="product__options">
-                  <dt>Масса</dt>
-                  <dd>500 г</dd>
-                  <dt>Вкус</dt>
-                  <dd>Рис</dd>
-                  <dt>Цена</dt>
-                  <dd>500 Р.</dd>
+                  <dt class="product__definition">Масса</dt>
+                  <dd class="product__total">500 г</dd>
+                  <dt class="product__definition">Вкус</dt>
+                  <dd class="product__total">Рис</dd>
+                  <dt class="product__definition">Цена</dt>
+                  <dd class="product__total">500 Р.</dd>
                 </dl>
               </div>
             </div>
-            <button class="button" type="button">
+            <a class="product__button button" href="#">
               Заказать
-            </button>
+            </a>
           </div>
           <div class="more-products">
             <p class="more-products__name">
@@ -225,9 +226,9 @@
             <p class="more-products__text">
               На самом деле вкусов гораздо больше!
             </p>
-            <button class="button button--show" type="button">
+            <a class="button button--show">
               показать все
-            </button>
+            </a>
           </div>
         </section>
         <section class="additional-products">
@@ -236,70 +237,70 @@
           </h2>
           <ul class="additional-products__list">
             <li class="additional-products__item">
-              <div class="surplus-product">
-                <h3 class="surplus-product__name">
+              <div class="additional-products__wrapper">
+                <h3 class="additional-products__name">
                   Сахарозаменитель
                 </h3>
-                <dl class="surplus-product__price">
-                  <dt>1 упаковка (100 г)</dt>
-                  <dd>200 Р.</dd>
+                <dl class="additional-products__price">
+                  <dt class="additional-products__definition">1 упаковка (100 г)</dt>
+                  <dd class="additional-products__total">200 Р.</dd>
                 </dl>
               </div>
-              <button class="button" type="button">
+              <a class="additional-products__buttom button" href="#">
                 Заказать
-              </button>
+              </a>
             </li>
             <li class="additional-products__item">
-              <div class="surplus-product">
-                <h3 class="surplus-product__name">
+              <div class="additional-products__wrapper">
+                <h3 class="additional-products__name">
                   Питьевая вода
                 </h3>
-                <dl class="surplus-product__price">
-                  <dt>5 литров</dt>
-                  <dd>50 Р.</dd>
+                <dl class="additional-products__price">
+                  <dt class="additional-products__definition">5 литров</dt>
+                  <dd class="additional-products__total">50 Р.</dd>
                 </dl>
               </div>
-              <button class="button" type="button">
+              <a class="additional-products__buttom button" href="#">
                 Заказать
-              </button>
+              </a>
             </li>
             <li class="additional-products__item">
-              <div class="surplus-product">
-                <h3 class="surplus-product__name">
+              <div class="additional-products__wrapper">
+                <h3 class="additional-products__name">
                   Молоко
                 </h3>
-                <dl class="surplus-product__price">
-                  <dt>1 литр</dt>
-                  <dd>100 Р.</dd>
+                <dl class="additional-products__price">
+                  <dt class="additional-products__definition">1 литр</dt>
+                  <dd class="additional-products__total">100 Р.</dd>
                 </dl>
               </div>
-              <button class="button" type="button">
+              <a class="additional-products__buttom button" href="#">
                 Заказать
-              </button>
+              </a>
             </li>
             <li class="additional-products__item">
-              <div class="surplus-product">
-                <h3 class="surplus-product__name">
+              <div class="additional-products__wrapper">
+                <h3 class="additional-products__name">
                   Витамины
                 </h3>
-                <dl class="surplus-product__price">
-                  <dt>1 упаковка (30 г)</dt>
-                  <dd>300 Р.</dd>
+                <dl class="additional-products__price">
+                  <dt class="additional-products__definition">1 упаковка (30 г)</dt>
+                  <dd class="additional-products__total">300 Р.</dd>
                 </dl>
               </div>
-              <button class="button" type="button">
+              <a class="additional-products__buttom button" href="#">
                 Заказать
-              </button>
+              </a>
             </li>
           </ul>
           <div class="gift">
-            <p class="gift-text">
+            <p class="gift__text">
               Закажите все и получите чехол для кота в подарок!
             </p>
           </div>
         </section>
       </div>
-      <div class="contacts">
+      <div class="contacts contacts--dark">
         <p class="contacts__text">
           приглашаем к сотрудничеству дилеров!
         </p>
