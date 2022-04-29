@@ -1,0 +1,30 @@
+.form-field__name {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special_dark-grey;
+}
+
+.form-field__input {
+  padding: 13px 15px 14px 12px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid @border-grey-3;
+  box-sizing: border-box;
+
+  &::-webkit-input-placeholder {
+    color: @special_dark-grey;
+  }
+
+  &--email {
+    border: 1px solid @special_grey-2;
+  }
+
+  &--phone {
+    border: 1px solid @special_grey-2;
+  }
+}
