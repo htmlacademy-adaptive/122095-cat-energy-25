@@ -4,6 +4,10 @@
   &--position {
     margin-bottom: 49px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 105px 0 30px;
+  }
 }
 
 .instruction__title {
@@ -17,6 +21,38 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.instruction__item {
+  &--1 {
+    @media (min-width: @tablet-width) {
+      width: 230px;
+    }
+  }
+
+  &--2 {
+    @media (min-width: @tablet-width) {
+      width: 246px;
+    }
+  }
+
+  &--3 {
+    @media (min-width: @tablet-width) {
+      width: 247px;
+    }
+  }
+
+  &--4 {
+    @media (min-width: @tablet-width) {
+      width: 249px;
+    }
+  }
 }
 
 .instruction__text {

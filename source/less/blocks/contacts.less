@@ -1,12 +1,23 @@
 .contacts {
+  display: flex;
+  justify-content: space-between;
   padding: 26px 20px;
 
   &--dark {
     background-color: @basic_grey;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 56px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 56px 80px;
+  }
 }
 
 .contacts__text {
+  width: 139px;
   margin: 0;
   font-size: 16px;
   line-height: 20px;
@@ -15,8 +26,17 @@
 }
 
 .contacts__address {
+  width: 139px;
   font-family: @special_font;
   font-style: normal;
   line-height: 20px;
   color: @special_dark-grey;
+
+  span {
+    display: block;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 20px;
+    }
+  }
 }
