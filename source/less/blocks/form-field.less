@@ -1,4 +1,11 @@
+.form-field {
+  display: flex;
+  column-gap: 14px;
+}
+
 .form-field__name {
+  flex-shrink: 0;
+  align-self: center;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -6,7 +13,8 @@
 }
 
 .form-field__input {
-  padding: 13px 15px 14px 12px;
+  width: 100%;
+  padding: 13px 15px 14px 15px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -15,6 +23,10 @@
   text-transform: uppercase;
   border: 1px solid @border_grey-3;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 20px;
+  }
 
   &::-webkit-input-placeholder {
     color: @special_dark-grey;
@@ -26,5 +38,14 @@
 
   &--phone {
     border: 1px solid @special_grey-2;
+  }
+
+  &--textarea {
+    padding: 9px 12px 9px 15px;
+    resize: none;
+
+    @media (min-width: @tablet-width) {
+      padding: 10px 19px;
+    }
   }
 }

@@ -1,12 +1,24 @@
 .instruction {
-  padding: 0 20.5px;
+  padding: 0 20px;
 
   &--position {
     margin-bottom: 49px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 47px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 26px;
+    }
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 105px 0 30px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
   }
 }
 
@@ -15,6 +27,10 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 32px 0;
+  }
 }
 
 .instruction__list {
@@ -25,37 +41,29 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    row-gap: 37px;
   }
 }
 
 .instruction__item {
-  &--1 {
-    @media (min-width: @tablet-width) {
-      width: 230px;
-    }
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
-  &--2 {
-    @media (min-width: @tablet-width) {
-      width: 246px;
-    }
+  @media (min-width: @tablet-width) {
+    max-width: 50%;
+    margin: 0;
   }
 
-  &--3 {
-    @media (min-width: @tablet-width) {
-      width: 247px;
-    }
-  }
-
-  &--4 {
-    @media (min-width: @tablet-width) {
-      width: 249px;
-    }
+  @media (min-width: @desktop-width) {
+    max-width: 25%;
   }
 }
 
 .instruction__text {
+  margin: 0;
   font-family: @special_font;
   line-height: 18px;
   color: @special_dark-grey;

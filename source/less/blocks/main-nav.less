@@ -1,8 +1,16 @@
 .main-nav {
+  position: absolute;
+  content: "";
+  left: 0;
+  z-index: 2;
+  display: none;
+  width: 100%;
   background-color: @basic_white;
 }
 
 .main-nav__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 
   @media (min-width: @tablet-width) {
@@ -11,7 +19,13 @@
   }
 }
 
+.main-nav__item {
+  border-top: 1px solid @border_grey;
+}
+
 .main-nav__link {
+  display: block;
+  padding: 22px 0 23px 0;
   font-family: @basic_font;
   font-style: normal;
   text-decoration: none;
@@ -19,5 +33,6 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
   color: @basic_black;
 }
