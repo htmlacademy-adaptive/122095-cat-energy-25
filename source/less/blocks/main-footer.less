@@ -1,17 +1,88 @@
 .main-footer {
-  padding: 39px 20px 22px 20px;
+  padding: 20px;
   background-color: @basic_grey;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 56px 30px 53px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 56px 110px 55px 110px;
+  }
+}
+
+.main-footer__logo-caintainer {
+  padding: 19px 0 27px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.main-footer__logo {
+  display: block;
+  width: 128px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 8px 0 1px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 6px 0 4px 0;
+  }
+}
+
+.main-footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  min-width: 132px;
+  padding: 20px 20px 16px 20px;
+  border-top: 1px solid @border_grey-2;
+
+  @media (min-width: @tablet-width) {
+    margin: 6px 0;
+    padding: 0 0 0 25px;
+    border: none;
+  }
 }
 
 .main-footer__link {
   text-decoration: none;
 }
 
-.main-footer__html-logo {
-  text-decoration: none;
+.main-footer__company-wrapper {
+  padding: 22px 0;
+  border-top: 1px solid @border_grey-2;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+  }
 }
 
-.html-link__text {
+.main-footer__company-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    width: 163px;
+    margin: 1px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 2px 0;
+  }
+}
+
+.main-footer__company-text {
+  margin: 0;
   font-family: @special_font;
   font-size: 16px;
   line-height: 18px;

@@ -1,7 +1,28 @@
 .main-header {
-  padding: 11px 20px 17.39px 20px;
+  padding: 11px 20px 0 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .main-header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 191px;
+  margin-bottom: 17px;
   text-decoration: none;
+}
+
+.main-header__button {
+  position: absolute;
+  content: "";
+  top: 24px;
+  right: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

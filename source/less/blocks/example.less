@@ -1,6 +1,37 @@
 .example {
   padding: 25px 20px 40px 20px;
-  background-color: #eaeaea;
+
+  @media (max-width: @mobile-width-only) {
+    background-color: @special_grey-4;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 43px 30px 55px 30px;
+    background-image: linear-gradient(to top, @special_grey-4 0, @special_grey-4 384px, @basic_white 384px);
+    border-top: 1px solid @border_grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    padding: 0 110px 65px 110px;
+    background-image: linear-gradient(to top, @basic_grey 0, @basic_grey 462px, @basic_white 462px);
+    border: none;
+  }
+}
+
+.example__container {
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 436px;
+    margin-bottom: 0;
+    margin-right: 193px;
+    padding: 43px 0 10px 0;
+  }
 }
 
 .example__title {
@@ -8,29 +39,103 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 63px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 146px 0;
+  }
 }
 
 .example__text {
+  margin: 0 0 20px 0;
   font-family: @special_font;
   line-height: 18px;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 54px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 69px 0;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.example__results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 11.12%;
+  justify-content: center;
+  margin: 0 0 34px 0;
+
+  @media (min-width: @tablet-width) {
+    min-width: 50%;
+    margin: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 55px 0;
+  }
+}
+
+.example__group {
+  position: relative;
 }
 
 .example__definition {
+  position: absolute;
+  content: "";
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 80px;
   font-family: @special_font;
   font-size: 12px;
   line-height: 100%;
   text-align: center;
   color: @special_dark-grey;
+  background-color: @special_grey-4;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic_white;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic_grey;
+  }
 }
 
 .example__total {
+  grid-row: 1 / 2;
+  margin: 0;
+  padding-top: 13px;
+  padding-bottom: 17px;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
+  border: 1px solid @special_grey-2;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 
 .example__expenses {
+  margin: 0;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
