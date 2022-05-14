@@ -23,6 +23,10 @@
     display: flex;
     gap: 35px;
   }
+
+  @media (min-width: @desktop-width) {
+    min-width: 483px;
+  }
 }
 
 .main-nav__item {
@@ -47,6 +51,13 @@
   color: @basic_black;
 
   @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
 
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

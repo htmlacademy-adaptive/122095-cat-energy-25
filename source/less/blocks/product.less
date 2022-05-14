@@ -58,23 +58,21 @@
 
 .product__link {
   display: block;
-  max-width: 76px;
   margin: 0 0 14px 0;
   color: @special_dark-grey-2;
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
-    max-width: 174px;
-    margin: 0 auto 21px auto;
+    margin: 0 0 21px 0;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 145px;
-    margin: 0 auto 22px auto;
+    margin: 0 0 22px 0;
   }
 }
 
 .product__name {
+  max-width: 76px;
   margin: 0;
   font-weight: 400;
   font-size: 16px;
@@ -82,7 +80,15 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    max-width: 134px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 24px;
     text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 145px;
   }
 }
 
@@ -105,6 +111,10 @@
   dd {
     margin: 0;
     text-align: end;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
   }
 }
 
