@@ -1,6 +1,14 @@
 .catalog {
   padding: 27px 0 0 0;
   border-top: 1px solid @border_grey-2;
+
+  @media (min-width: @tablet-width) {
+    padding: 65px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 74px 0 0 0;
+  }
 }
 
 .catalog__title {
@@ -8,4 +16,12 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 30px 82px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 110px 84px 110px;
+  }
 }

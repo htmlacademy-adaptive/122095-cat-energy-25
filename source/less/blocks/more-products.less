@@ -1,6 +1,12 @@
 .more-products {
-  padding: 25px 20px 25px 21px;
+  margin-top: 81px;
+  padding: 25px 20px;
   border-bottom: 1px solid @special_grey;
+
+  @media (min-width: @tablet-width) {
+    padding: 52px 38px 38px 38px;
+    border: 2px solid @basic_grey;
+  }
 }
 
 .more-products__name {
@@ -10,6 +16,10 @@
   text-align: center;
   text-transform: uppercase;
   color: @special_black;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 23px 0;
+  }
 }
 
 .more-products__text {
@@ -19,4 +29,8 @@
   line-height: 16px;
   text-align: center;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 87px 0;
+  }
 }
