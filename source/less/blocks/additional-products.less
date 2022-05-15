@@ -1,13 +1,34 @@
 .additional-products {
   padding: 25px 20px 35px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 68px 30px 76px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 57px;
+    padding: 75px 110px 83px 110px;
+  }
 }
 
 .additional-products__title {
-  margin: 0 0 36px 0;
+  margin: 0 22px 36px 0;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 36px 80px 37px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin: 0 35px 84px 0;
+  }
 }
 
 .additional-products__list {
@@ -15,31 +36,88 @@
   padding: 0;
   list-style: none;
   border-top: 1px solid @special_grey-2;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 69px 0;
+    border: 1px solid @special_grey-2;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    margin: 0 0 0 22px;
+    border: none;
+    border-top: 1px solid @special_grey-2;
+  }
 }
 
 .additional-products__item {
   padding: 13px 0 19px 0;
   border-bottom: 1px solid @special_grey-2;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    column-gap: 38px;
+    padding: 15px 0 17px 0;
+  }
 }
 
 .additional-products__wrapper {
   margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+  }
 }
 
 .additional-products__name {
+  margin: 0 0 13px 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: @special_dark-grey-2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional-products__price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 0 15px 0;
   font-family: @special_font;
   line-height: 14px;
   color: @special_dark-grey;
+
+  dd {
+    text-align: end;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 288px;
+  }
 }
 
 .additional-products__buttom {
+  min-width: 244px;
+  font-size: 16px;
+  line-height: 20px;
   text-decoration: none;
 }

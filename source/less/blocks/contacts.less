@@ -23,6 +23,11 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @special_black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__address {
@@ -38,5 +43,9 @@
     @media (min-width: @tablet-width) {
       margin-top: 20px;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
   }
 }

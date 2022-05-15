@@ -10,6 +10,11 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form-field__input {
@@ -26,6 +31,8 @@
 
   @media (min-width: @tablet-width) {
     padding: 10px 20px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   &::-webkit-input-placeholder {

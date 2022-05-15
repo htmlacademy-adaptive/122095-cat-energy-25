@@ -1,31 +1,101 @@
 .product {
-  padding-top: 19px;
-  padding-bottom: 25px;
+  padding: 19px 20px 25px 20px;
   border-bottom: 1px solid @special_grey;
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 0 39px 0;
+    background-image: linear-gradient(to bottom, @basic_white 0, @basic_white 81px, @basic_grey 81px, @basic_grey 100%);
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 1px 0 40px 0;
+    border: none;
+  }
 }
 
 .product__wrapper {
-  margin: 0 18px 13px 20px;
+  display: flex;
+  margin: 0 0 13px 0;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    margin: 0 0 33px 0;
+    padding: 0 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 38px;
+  }
 }
 
 .product__image {
   display: block;
+  min-width: 50%;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 46px;
+  }
+}
+
+.product__description {
+  min-width: 50%;
+  padding-bottom: 9px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+  }
 }
 
 .product__link {
+  display: block;
+  margin: 0 0 14px 0;
   color: @special_dark-grey-2;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 21px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 22px 0;
+  }
 }
 
 .product__name {
-  margin: 0 0 14px 0;
+  max-width: 76px;
+  margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    max-width: 134px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 145px;
+  }
 }
 
 .product__options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
   font-family: @special_font;
   font-style: normal;
   font-weight: 400;
@@ -33,9 +103,29 @@
   line-height: 16px;
   text-align: center;
   color: @special_dark-grey;
+
+  dt {
+    text-align: start;
+  }
+
+  dd {
+    margin: 0;
+    text-align: end;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
 }
 
 .product__button {
-  margin: 0 20px;
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 20px;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 38px;
+  }
 }
