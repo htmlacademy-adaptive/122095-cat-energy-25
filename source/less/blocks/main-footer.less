@@ -5,11 +5,11 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding: 56px 30px 53px 30px;
+    padding: 54px 30px 51px 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 56px 110px 55px 110px;
+    padding: 58px 110px 49px 110px;
   }
 }
 
@@ -25,6 +25,14 @@
   display: block;
   width: 128px;
   margin: 0 auto;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: @tablet-width) {
     margin: 8px 0 1px 0;
@@ -49,10 +57,27 @@
     padding: 0 0 0 25px;
     border: none;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 0 3px;
+  }
 }
 
 .main-footer__link {
   text-decoration: none;
+
+  &:hover {
+    .main-footer__icon {
+      fill: @basic_green;
+    }
+  }
+
+  &:active {
+    .main-footer__icon {
+      fill: @basic_green;
+      opacity: 0.3;
+    }
+  }
 }
 
 .main-footer__company-wrapper {
@@ -70,6 +95,16 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+
+  &:hover {
+    .main-footer__company-icon {
+      fill: @basic_green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     width: 163px;

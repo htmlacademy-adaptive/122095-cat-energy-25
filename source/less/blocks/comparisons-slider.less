@@ -21,9 +21,58 @@
   text-transform: uppercase;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+
+    span {
+      border-bottom: 1px dotted @special_grey-2;
+    }
+
+    &:hover {
+      span {
+        border-bottom: 1px solid @special_grey-3;
+      }
+    }
+
+    &:active {
+      span {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.comparisons-slider__toggle {
+  align-self: center;
+  width: 85.58px;
+  height: 14px;
+  padding: 3px 6.11px;
+  background-color: @basic_white;
+  border: 1px solid @special_grey-2;
+  border-radius: 6px;
+  box-sizing: border-box;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 35.66px;
+    height: 6px;
+    background-color: @basic_green;
+    border-radius: 6px;
+  }
+
+  &--before {
+    &::after {
+      margin-right: auto;
+    }
+  }
+
+  &--after {
+    &::after {
+      margin-left: auto;
+    }
   }
 }

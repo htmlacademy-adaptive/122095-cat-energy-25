@@ -12,12 +12,13 @@
         <img src="img/header-logo-mobile.svg" width="33" height="37" alt="Логотип интернет-магазина «Кэт энерджи».">
         <img src="img/header-logo-2.svg" width="101" height="18" alt="Интернет-магазин «Кэт энерджи».">
       </a>
-      <button class="main-header__button" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__button" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span></span>
+        </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active">
+          <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">
               Главная
             </a>
@@ -27,7 +28,7 @@
               Каталог продукции
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--active">
             <a class="main-nav__link">
               Подбор программы
             </a>
@@ -133,16 +134,23 @@
           </div>
         </form>
       </section>
-      <div class="contacts contacts--dark">
-        <p class="contacts__text">
-          приглашаем к&nbsp;сотрудничеству дилеров!
-        </p>
-        <address class="contacts__address">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-        </address>
-      </div>
-      <div class="location">
-        <img class="location__image" src="img/location.jpg" width="320" height="362" alt="Место главного офиса «Кэт энерджи» на карте.">
+      <div class="main-container__contacts">
+        <div class="contacts contacts--dark">
+          <p class="contacts__text">
+            приглашаем<br>к сотрудничеству<br>дилеров!
+          </p>
+          <address class="contacts__address">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </address>
+        </div>
+        <div class="location">
+          <h2 class="visually-hidden">Как до нас добраться</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+            allowfullscreen
+            title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"
+          ></iframe>
+        </div>
       </div>
     </main>
     <footer class="main-footer">
@@ -183,5 +191,6 @@
         </a>
       </div>
     </footer>
+    <script src="/scripts/script.js"></script>
   </body>
 </html>

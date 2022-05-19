@@ -1,31 +1,108 @@
-.main-nav {
+.main-nav__button {
+  position: absolute;
+  content: "";
+  top: 19px;
+  right: 20px;
+  width: 24px;
+  height: 2px;
+  padding: 9px 0;
+  background-color: transparent;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__button {
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: @basic_black;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 24px;
+    background-color: @basic_black;
+  }
+
+  &::before {
+    transform: translate(0, -6px);
+  }
+
+  &::after {
+    transform: translate(0, 6px);
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
+}
+
+.main-nav--opened .main-nav__button {
+  padding-bottom: 14px;
+
+  span {
+    display: block;
+    width: 24px;
+    height: 0;
+    background-color: @basic_black;
+  }
+
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 24px;
+    background-color: @basic_black;
+  }
+
+  &::before {
+    transform: rotate(45deg) translate(2px, 2px);
+  }
+
+  &::after {
+    transform: rotate(-45deg) translate(-0.5px, 1px);
+  }
+}
+
+.main-nav--nojs .main-nav__list {
+  @media (max-width: @mobile-width-only) {
+    position: static;
+    display: block;
+  }
+}
+
+.main-nav--nojs .main-nav__button {
+  display: none;
+}
+
+.main-nav__list {
   position: absolute;
   content: "";
   left: 0;
   z-index: 2;
   display: none;
   width: 100%;
-  background-color: @basic_white;
-
-  @media (min-width: @tablet-width) {
-    position: static;
-    display: block;
-    max-width: 440px;
-  }
-}
-
-.main-nav__list {
   margin: 0;
   padding: 0;
+  background-color: @basic_white;
   list-style: none;
 
   @media (min-width: @tablet-width) {
+    position: static;
     display: flex;
-    gap: 35px;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-width: 483px;
+    flex-wrap: wrap;
+    column-gap: 35px;
   }
 }
 
@@ -34,6 +111,10 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+
+    &--active {
+      border-bottom: 2px solid @basic_green;
+    }
   }
 }
 
@@ -50,13 +131,23 @@
   text-align: center;
   color: @basic_black;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
+    padding: 18px 1px 7px 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 14px 0 7px 0;
     font-size: 20px;
     line-height: 30px;
   }
