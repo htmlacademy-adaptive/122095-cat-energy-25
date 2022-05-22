@@ -27,9 +27,18 @@
   }
 
   &--show {
+    padding: 10px 20px;
     font-size: 16px;
     line-height: 20px;
     color: @special_dark-grey;
     background-color: @basic_grey;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 -3px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0 -1px;
+    }
   }
 }
