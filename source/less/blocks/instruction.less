@@ -45,6 +45,7 @@
     grid-template-columns: 1fr 1fr;
     row-gap: 37px;
     column-gap: 59px;
+    counter-reset: program;
   }
 
   @media (min-width: @desktop-width) {
@@ -63,12 +64,36 @@
       background-image: url("../../img/instruction/icon_leaf.svg");
       background-size: 30px 32px;
     }
+
+    @media (min-width: @tablet-width) {
+      &::after {
+        right: 100px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        right: 21px;
+      }
+    }
   }
 
   &--tub {
     &::before {
       background-image: url("../../img/instruction/icon_tub.svg");
       background-size: 29px 31px;
+    }
+
+    @media (min-width: @tablet-width) {
+      &::after {
+        right: 79px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        right: 0;
+      }
     }
   }
 
@@ -77,12 +102,36 @@
       background-image: url("../../img/instruction/icon_eat.svg");
       background-size: 25px 30px;
     }
+
+    @media (min-width: @tablet-width) {
+      &::after {
+        right: 78px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        right: -1px;
+      }
+    }
   }
 
   &--alarm {
     &::before {
       background-image: url("../../img/instruction/icon_alarm.svg");
       background-size: 32px 33px;
+    }
+
+    @media (min-width: @tablet-width) {
+      &::after {
+        right: 76px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        right: -3px;
+      }
     }
   }
 
@@ -108,10 +157,23 @@
   }
 
   @media (min-width: @tablet-width) {
+    position: relative;
     display: block;
     margin: 0;
     padding-top: 40px;
     padding-bottom: 57px;
+    counter-increment: program;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      display: block;
+      content: counter(program);
+      font-size: 280px;
+      line-height: 280px;
+      color: @basic_grey;
+    }
   }
 }
 

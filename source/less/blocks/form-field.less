@@ -1,6 +1,15 @@
 .form-field {
+  position: relative;
   display: flex;
   column-gap: 14px;
+
+  @media (min-width: @tablet-width) {
+    column-gap: 17px;
+  }
+}
+
+.form-field[type="number"] {
+  appearance: textfield;
 }
 
 .form-field__name {
@@ -14,12 +23,16 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+
+    &--phone {
+      margin-left: -3px;
+    }
   }
 }
 
 .form-field__input {
   width: 100%;
-  padding: 13px 15px 14px 15px;
+  padding: 13px 15px 12px 15px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -28,11 +41,41 @@
   text-transform: uppercase;
   border: 1px solid @border_grey-3;
   box-sizing: border-box;
+  appearance: textfield;
+
+  &:hover {
+    border: 1px solid @special_grey-2;
+  }
+
+  &:focus {
+    outline: 2px solid @special_dark-grey;
+    outline-offset: -2px;
+  }
+
+  &:focus:required:invalid {
+    outline: 2px solid @status_error;
+    outline-offset: -2px;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 10px 20px;
     font-size: 20px;
     line-height: 30px;
+
+    &--name {
+      padding-left: 17px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--cat-age {
+      padding-left: 17px;
+    }
   }
 
   &::-webkit-input-placeholder {
@@ -40,19 +83,72 @@
   }
 
   &--email {
-    border: 1px solid @special_grey-2;
+    margin-left: -3px;
+    padding-right: 36px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 2px;
+      padding-right: 42px;
+    }
   }
 
   &--phone {
-    border: 1px solid @special_grey-2;
+    margin-left: -5px;
+    padding-right: 36px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: -1px;
+      padding-right: 42px;
+    }
   }
 
   &--textarea {
-    padding: 9px 12px 9px 15px;
+    padding: 9px 12px 14px 15px;
     resize: none;
 
     @media (min-width: @tablet-width) {
       padding: 10px 19px;
+      max-height: 174px;
     }
+  }
+}
+
+.form-field__input:focus + .form-field__email-icon {
+  color: @basic_green;
+}
+
+.form-field__input:focus + .form-field__phone-icon {
+  fill: @basic_green;
+}
+
+.form-field__input:focus:required:invalid + .form-field__email-icon {
+  color: @status_error;
+}
+
+.form-field__input:focus:required:invalid + .form-field__phone-icon {
+  fill: @status_error;
+}
+
+.form-field__email-icon {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  color: @basic_black;
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    right: 19px;
+  }
+}
+
+.form-field__phone-icon {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  fill: @basic_black;
+
+  @media (min-width: @tablet-width) {
+    top: 15px;
+    right: 18px;
   }
 }
